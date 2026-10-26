@@ -13,22 +13,22 @@
 <style>
 :root{--bg:#f8f7f1;--panel:#fffefb;--panel2:#efeee5;--line:#e4e4d9;--text:#20211d;--muted:#77786f;--purple:#91b82d;--pink:#708a22;--green:#91b82d}
 body{background:var(--bg);color:var(--text);font-family:'DM Sans',system-ui,-apple-system,'Segoe UI',sans-serif}
-.wrap { max - width : 1160 px }
-.nav { border-bottom : 1px solid var ( -- line ) ; background : #f8f7f1e8; backdrop - filter : blur ( 18px ) }  
-.marca { espaçamento entre letras : -1px ; família da fonte : Manrope , system - ui , sans -serif } .marca b { cor : #8aa92b } 
-.navlinks a { color : #5c5d54 } .navlinks  a : hover { color : # 20211d } 
-. btn { background : var ( --dark ,#171813 ) ; background :#171813; color : white ; border-radius : 999 px ; box-shadow : 0  8 px  24 px #17181316 }
-. btn : hover { filter : brightness ( 1.12 ) ; box-shadow : 0  12 px  28 px #17181320 }
-.btn .alt { background :#fffefb; color : #20211d; border : 1px solid #dcdacf ; box- shadow : none } 
-.hero h1 { font - family : Manrope , system-ui , sans-serif ; letter-spacing : -3px ; line - height :  1.02 }
-.hero h1  span { background : linear-gradient ( 90deg , # 718b24 , #a3c43b )  ; -webkit -background-clip : text ; color : transparent }
-. sobrancelha { cor :#748d2a; espaçamento entre letras : 1,6 px }
-
-
-
-
+.wrap{max-width:1160px}
+.nav{border-bottom:1px solid var(--line);background:#f8f7f1e8;backdrop-filter:blur(18px)}
+.brand{letter-spacing:-1px;font-family:Manrope,system-ui,sans-serif}.brand b{color:#8aa92b}
+.navlinks a{color:#5c5d54}.navlinks a:hover{color:#20211d}
+.btn{background:var(--dark,#171813);background:#171813;color:white;border-radius:999px;box-shadow:0 8px 24px #17181316}
+.btn:hover{filter:brightness(1.12);box-shadow:0 12px 28px #17181320}
+.btn.alt{background:#fffefb;color:#20211d;border:1px solid #dcdacf;box-shadow:none}
+.hero h1{font-family:Manrope,system-ui,sans-serif;letter-spacing:-3px;line-height:1.02}
+.hero h1 span{background:linear-gradient(90deg,#718b24,#a3c43b);-webkit-background-clip:text;color:transparent}
+.eyebrow{color:#748d2a;letter-spacing:1.6px}
+.visual{border:1px solid #e4e4d9;border-radius:30px;background:linear-gradient(145deg,#eeeddf,#f8f7f1 55%,#e3e0d2);box-shadow:0 28px 65px #17181312}
+.orb{background:#d7fb6370;filter:blur(58px)}
+.mockphone{border:1px solid #d8d7ca;background:#fffefb;color:#20211d;box-shadow:0 25px 55px #17181320}
+.phonehead{color:#718b24}.search{border-color:#e4e4d9;color:#77786f}
 .chip{background:#f0f1e7;border-color:#dfe2d0;color:#34372c}
-.pro{border-bottom-color:#e9e7de}.pro pequeno{color:#77786f}
+.pro{border-bottom-color:#e9e7de}.pro small{color:#77786f}
 .avatar{background:linear-gradient(135deg,#d7fb63,#b5d95a);color:#20211d}
 .section h2,.viewhead h1{font-family:Manrope,system-ui,sans-serif;letter-spacing:-1.5px}
 .card,.service,.metric{background:#fffefb;border-color:#e4e4d9;box-shadow:0 8px 26px #17181305}
@@ -38,7 +38,7 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',system-ui,-app
 .footer{border-color:#e4e4d9;color:#77786f}
 input,select{background:#fffefb;color:#20211d;border-color:#dcdacf}
 input:focus,select:focus{outline:3px solid #d7fb6355;border-color:#9bbd35}
-.serviço .preço{cor:#718b24}
+.service .price{color:#718b24}
 .badge{border-color:#dce6bb;color:#637b20;background:#f1f6df}
 .slot{background:#fffefb;border-color:#deded3;color:#20211d}
 .slot.selected{background:#171813;border-color:#171813;color:#d9ff65}
@@ -56,23 +56,23 @@ input:focus,select:focus{outline:3px solid #d7fb6355;border-color:#9bbd35}
 .grid .card{border-radius:22px}
 @media(max-width:800px){.hero h1{letter-spacing:-2px}.visual{min-height:330px}.dashboard{grid-template-columns:1fr}.side{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}.side button{font-size:12px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
-</ estilo >
-< meta  name = "bvne-version"  content = "V12 Signature — base consolidada e integração Supabase" >
+</style>
+<meta name="bvne-version" content="V12 Signature — base consolidada e integração Supabase">
 
-< style  id = "bvne-v10-tuning" >
-/* V11: revisões de integração e preparação para testes funcionais. */
-#dashContent select, #dashContent input, #dashContent textarea { max-width:100%; }dashContent select, #dashContent input, #dashContent textarea { max-width:100%; }
-#dashContent .notice { line-height:1.55; }dashContent .notice { line-height:1.55; }
-</ estilo >
-</head>​​
-< corpo >
-< header  class = "wrap nav" >
-  < div  class = " brand " > <b> Ɓ </b> BVNE </div>​​​​
-  < nav  class = "navlinks" > < a  href = "#"  onclick = " return showView('home')"  > Início </ a > < a href = "#" onclick = " return showView('professionals')" > Profissionais </ a > < a href = "#" onclick = " return showView('plans')" > Planos </ a > < a href = "#" onclick = " return goHowItWorks()" > Como funciona </ a > </ nav >showView('home')"   showView('professionals')"   showView('plans')"   goHowItWorks()"
-  < div  style = " display:flex;gap:8px;align-items:center" :> < button class = "btn alt" onclick = " showView ('integration')" > Conectar backend </button> < button class = " btn" onclick = " showView ('login' ) " > Entrar </button> </div>flex;gap:8px;align-items:center"  ('integration')"  ('login')"
-</ cabeçalho >
-
-
+<style id="bvne-v10-tuning">
+/* V11: correções de integração e preparação para testes funcionais. */
+#dashContent select, #dashContent input, #dashContent textarea { max-width:100%; }
+#dashContent .notice { line-height:1.55; }
+</style>
+</head>
+<body>
+<header class="wrap nav">
+  <div class="brand"><b>Ɓ</b> BVNE</div>
+  <nav class="navlinks"><a href="#" onclick="return showView('home')">Início</a><a href="#" onclick="return showView('professionals')">Profissionais</a><a href="#" onclick="return showView('plans')">Planos</a><a href="#" onclick="return goHowItWorks()">Como funciona</a></nav>
+  <div style="display:flex;gap:8px;align-items:center"><button class="btn alt" onclick="showView('integration')">Conectar backend</button><button class="btn" onclick="showView('login')">Entrar</button></div>
+</header>
+<main class="wrap">
+<section id="home" class="view active">
   <div class="hero">
     <div><div class="eyebrow">Agendamento sem complicação</div><h1>Seu tempo.<br><span>Seu negócio.</span><br>Mais simples.</h1><p>A BVNE conecta profissionais e clientes em uma experiência digital rápida, elegante e fácil de usar — do primeiro clique ao agendamento confirmado.</p><div class="actions"><button class="btn" onclick="showView('professionals')">Encontrar profissional ↗</button><button class="btn alt" onclick="showView('login')">Acessar minha conta</button></div><div class="stats"><div><strong>24/7</strong>Agendamento online</div><div><strong>1 link</strong>Para compartilhar</div><div><strong>Multiplataforma</strong>Celular e computador</div></div></div>
     <div class="visual"><div class="orb"></div><div class="small">BVNE · PLATAFORMA DE AGENDAMENTOS</div><div class="mockphone"><div class="phonehead"><strong>Ɓ BVNE</strong><span>⋯</span></div><h3 style="margin:17px 0 4px">Encontre seu próximo cuidado.</h3><div class="search">⌕ Buscar serviço ou profissional</div><div class="chiprow"><span class="chip">Cabelo</span><span class="chip">Barbearia</span><span class="chip">Manicure</span><span class="chip">Estética</span></div><div class="pro"><div class="avatar">BV</div><div><b>Seu próximo agendamento</b><small>Profissionais cadastrados aparecerão aqui.</small></div></div><button class="btn" style="width:100%;margin-top:16px" onclick="showView('professionals')">Ver profissionais</button></div></div>
@@ -105,4 +105,4 @@ input:focus,select:focus{outline:3px solid #d7fb6355;border-color:#9bbd35}
  <div class="dashboard"><aside class="side" id="dashMenu"></aside><div class="dashmain" id="dashContent"></div></div>
 </section>
 <section id="integration" class="view">
- <div class="viewhead"><div><div class="eyebrow">
+ <div class="viewhead"><div><div class="eyebrow">Configuração técnica</div><h2>Conexão com o Supabase</h2><p class="sub">Configure o projeto BVNE Project existente. E
